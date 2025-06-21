@@ -1,0 +1,30 @@
+body {
+    background-color: wheat;
+}
+
+.nav-bar-container {
+
+    background-color: rebeccapurple;
+    padding: 15px;
+    background-color: rgb(248, 231, 200);
+    box-shadow: 0px 0px 2px black;
+}
+
+.nav-bar-item {
+    color: rgb(134, 110, 80);
+    display: inline;
+
+}
+
+#main-title {
+    color: rgb(134, 110, 80);
+    display: inline;
+
+}
+
+#date {
+    color: rgb(134, 110, 80);
+    display: inline;
+    padding-left: 460px;
+
+}
