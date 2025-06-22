@@ -1,10 +1,20 @@
 p,
 h1,
-h2 {
+h2,
+h3 {
     font-family: sans-serif;
     color: rgb(134, 110, 80);
 }
 
+@font-face {
+    font-family: candy-season;
+    src: url(/fonts/Candy\ Season.otf);
+}
+
+@font-face {
+    font-family: notes;
+    src: url(/fonts/Notevela.otf);
+}
 
 body {
     background-color: wheat;
@@ -26,7 +36,6 @@ body {
 
 .entry-container {
     margin-top: 100px;
-    display: flex;
     gap: 5;
     padding-left: 20px;
 
@@ -41,9 +50,11 @@ body {
 
 .entry-btn {
     font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
     color: rgb(248, 231, 200);
     padding: 5px 20px;
-    margin-left: 40vw;
+    margin-left: 41vw;
+    margin-top: 15px;
     width: 20vw;
     font-size: large;
     font-weight: bold;
@@ -58,13 +69,28 @@ body {
     resize: none;
     width: 60vw;
     height: 100px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* margin-right: 100vw; */
     border-color: rgb(134, 110, 80);
     border-width: 5px;
     border-radius: 10px;
 
     background-color: rgb(248, 231, 200);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 23px;
+    font-family: notes;
+    outline: none;
 
+}
+
+.entry-textarea:focus {
+    border-color: rgb(217, 72, 85);
+}
+
+
+
+.entry-datetime {
+    padding-top: -10px;
+    background-color: rgb(134, 110, 80);
+    color: rgb(248, 231, 200);
+    padding-left: 10px;
 }

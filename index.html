@@ -67,9 +67,12 @@
 
 
         <div class="entry-container">
-            <h2 class="entry-title">Add New Reminder</h2>
-            <textarea class="entry-textarea"></textarea>
-            <button class="entry-btn"><i class="fa-solid fa-plus"></i> Add New Reminder</button>
+            <h2 class="entry-title">Add New Reminders</h2>
+            <textarea class="entry-textarea" autofocus required></textarea>
+            <div style="display: flex; flex-direction: row;">
+                <h3 class="datetime-lable">Due Time: <input type="datetime-local" class="entry-datetime" /></h3>
+                <button class="entry-btn"><i class="fa-solid fa-plus"></i> Add New Reminder</button>
+            </div>
         </div>
 
     </main>
