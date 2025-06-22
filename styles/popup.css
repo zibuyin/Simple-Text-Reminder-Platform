@@ -1,0 +1,39 @@
+.helper-background {
+    margin-top: -100px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 10, 10, 0.5);
+    z-index: 1;
+    pointer-events: all;
+}
+
+#super-popup-container {
+    display: none;
+}
+
+.popup-container {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    height: 600px;
+    background-color: wheat;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+#popup-xbtn {
+    color: rgb(134, 110, 80);
+    padding: 15px;
+    scale: 2;
+    float: right;
+}
+
+#popup-xbtn:hover {
+    color: rgb(134, 80, 80);
+    cursor: pointer;
+}

@@ -1,0 +1,51 @@
+.nav-bar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgb(248, 231, 200);
+    box-shadow: 0px 0px 2px black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Distribute items evenly */
+}
+
+.nav-bar-btn-container {
+    display: flex;
+    /* Use flexbox for buttons */
+    gap: 20px;
+    /* Adjust spacing between buttons */
+    margin-right: 15px;
+    z-index: 2;
+}
+
+.nav-bar-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(248, 231, 200);
+    padding: 5px 16px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid rgb(134, 110, 80);
+    border-radius: 10px;
+    background-color: rgb(134, 110, 80);
+    cursor: pointer;
+}
+
+.nav-bar-btn:hover {
+    background-color: rgb(134, 80, 80);
+}
+
+#main-title {
+    margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(134, 110, 80);
+}
+
+/* #logo-flag {
+    float: left;
+    padding-right: 200px;
+    margin: au;
+    scale: 0.4;
+} */
