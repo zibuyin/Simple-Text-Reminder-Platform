@@ -43,9 +43,11 @@
     color: rgb(134, 110, 80);
 }
 
-/* #logo-flag {
-    float: left;
-    padding-right: 200px;
-    margin: au;
-    scale: 0.4;
-} */
+#logo-flag {
+    position: absolute;
+    top: 0;
+    left: 290px;
+    border: 0;
+    width: 110px;
+    z-index: 999;
+}
