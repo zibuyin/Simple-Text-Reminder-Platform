@@ -20,7 +20,7 @@
 
         <nav>
             <div class="nav-bar-container">
-                <h2 id="main-title">Simple-Text-Reminder</h2>
+                <h2 id="main-title">Simple Text Reminder</h2>
                 <!-- <img src="/images/flag-orpheus-top.svg" id="logo-flag" /> -->
                 <div class="nav-bar-btn-container">
 
@@ -40,11 +40,28 @@
         <div id="super-popup-container">
             <div class="helper-background"></div>
             <div class="popup-container">
-                <!-- <h2>Profile</h2> -->
+
+                <h2 class="settings-title">Settings</h2>
+                <div class="popup-info-container">
+                    <h2 class="gdpr-title">Data and Privacy</h2>
+
+                    <button class="danger-btn" onclick="dataDeletion()"><i class="fa-solid fa-trash-can"></i> Delete all
+                        notes </button>
+                    <button class="popup-btns"><i class="fa-solid fa-cookie-bite"></i> Delete all cookies
+
+                    </button>
+                    <button class="popup-btns"><i class="fa-solid fa-file-arrow-down"></i> Download all notes
+
+                    </button>
+                </div>
                 <i class="fa-solid fa-xmark" id="popup-xbtn" onclick="profileClick()"></i>
             </div>
             <!-- <h2 class="title">Create a new reminder</h2> -->
         </div>
+
+
+
+
         <div class="entry-container">
             <i class="fa-regular fa-circle" id="entry-unchecked"></i>
             <textarea class="entry"></textarea>
