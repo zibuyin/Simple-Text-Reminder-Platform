@@ -26,6 +26,10 @@ function gdprClick() {
 function dataDeletion() {
     var confirm = prompt("Please type (case sensitive): I confirm that I want to delete all my notes")
     if (confirm === "I confirm that I want to delete all my notes") {
+        localStorage.clear()
+        location.reload(true)
+        displayNotes()
+
         alert("Confirmation succeeded. All notes are deleted")
     }
     else {
@@ -38,46 +42,58 @@ function dataDeletion() {
 function submitEntry() {
     var valueEntry = document.getElementsByClassName("entry-textarea")[0].value
     var textArea = document.getElementsByClassName("entry-textarea")[0]
-    var noteID = parseInt(localStorage.getItem('noteCount')) + 1 //Increase the number by 1 to get current count
-    localStorage.setItem('noteCount', parseInt(noteID))
+    if (valueEntry === "") {
+        return
+    }
+    noteID = parseInt(localStorage.getItem('noteCount')) + 1
+
+    localStorage.setItem('noteCount', noteID)
     localStorage.setItem(noteID, valueEntry) //store the note
     // console.log(valueEntry)
-    textArea.value = "" //Clear the text area after submition
     displayNotes()
+    setRemindersCounter()
+    textArea.value = "" //Clear the text area after submition
+
 
 
 }
 
 
 function displayNotes() {
-    var x = localStorage.getItem('0')
-    var testing = document.getElementsByClassName("entry-display")[0].innerHTML = x
     for (var i = 0; i < localStorage.length; i++) {
         console.log("Item: ", localStorage.getItem(localStorage.key(i)))
     }
     console.log("-----")
 
+
     var noteDisplay = document.createElement("h2")
     let reminderContainer = document.getElementsByClassName("stored-container")[0]
     noteDisplay.className = "entry-display"
     reminderContainer.appendChild(noteDisplay)
+    noteID = parseInt(localStorage.getItem('noteCount'))
+    console.log("debug2: ", noteID)
+    var valueEntry = document.getElementsByClassName("entry-textarea")[0].value
+    console.log("debug3", valueEntry)
+    document.getElementsByClassName("entry-display")[noteID].innerHTML = valueEntry
 
 }
 
 function setRemindersCounter() {
-    console.log(String(typeof (localStorage.length)))
+    console.log("Notes Number: ", String(localStorage.length))
     document.getElementById("reminders-counter").innerHTML = "There are " + String(localStorage.length - 1) + " reminders"
 
 }
 
 
+//DEBUG DO NOT PUSH 
+localStorage.clear()
+
+//DEBUG DO NOT PUSH 
 
 // Initianlization
+
 localStorage.setItem('noteCount', -1)
+
 setRemindersCounter()
 
-displayNotes()
-//DEBUG DO NOT PUSH 
-// localStorage.clear()
-
-//DEBUG DO NOT PUSH 
+// displayNotes()

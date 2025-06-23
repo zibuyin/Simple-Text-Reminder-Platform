@@ -117,3 +117,8 @@ hr {
     display: flex;
     flex-direction: column;
 }
+
+.entry-display {
+    font-family: notes;
+    font-size: x-large;
+}
