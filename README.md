@@ -1,5 +1,5 @@
-# [Simple Text Reminders (WIP)](reminders.nathanyin.com)
-
+# [Simple Text Reminders (WIP)](https://reminders.nathanyin.com)
+![([/images/demo_screenshot1.png](https://github.com/zibuyin/Simple-Text-Reminder-Platform/blob/main/images/demo_screenshot1.png))](https://github.com/zibuyin/Simple-Text-Reminder-Platform/blob/main/images/demo_screenshot1.png)
 Demo: reminders.nathanyin.com
 >[!IMPORTANT]  
 > Reminders are hard to use nowadays, different apps with complex features that are hard to use. Personal data getting send to servers. Terrible user experience and data security.
