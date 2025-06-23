@@ -56,11 +56,18 @@ function displayNotes() {
         console.log("Item: ", localStorage.getItem(localStorage.key(i)))
     }
     console.log("-----")
+
+    var noteDisplay = document.createElement("h2")
+    let reminderContainer = document.getElementsByClassName("stored-container")[0]
+    noteDisplay.className = "entry-display"
+    reminderContainer.appendChild(noteDisplay)
+
 }
 
 function setRemindersCounter() {
     console.log(String(typeof (localStorage.length)))
     document.getElementById("reminders-counter").innerHTML = "There are " + String(localStorage.length - 1) + " reminders"
+
 }
 
 
