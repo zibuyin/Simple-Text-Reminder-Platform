@@ -71,8 +71,16 @@
             <textarea class="entry-textarea" autofocus required></textarea>
             <div style="display: flex; flex-direction: row;">
                 <h3 class="datetime-lable">Due Time: <input type="datetime-local" class="entry-datetime" /></h3>
-                <button class="entry-btn"><i class="fa-solid fa-plus"></i> Add New Reminder</button>
+                <button class="entry-btn" onclick="submitEntry()"><i class="fa-solid fa-plus"></i> Add New
+                    Reminder</button>
             </div>
+
+        </div>
+        <hr>
+        </hr>
+        <div class="stored-container">
+            <h1 id="reminders-counter">There are 0 reminders</h1>
+            <h2 class="entry-display">Input stuff</h2>
         </div>
 
     </main>
