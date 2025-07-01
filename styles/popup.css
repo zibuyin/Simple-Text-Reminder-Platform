@@ -1,5 +1,9 @@
+@import url("colors.css");
+
+
+
 button:hover {
-    background-color: rgb(134, 80, 80);
+    background-color: var(--accent)
 }
 
 .helper-background {
@@ -7,27 +11,35 @@ button:hover {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(10, 10, 10, 0.5);
+    background: rgba(var(--primary), 0.9);
+
     z-index: 1;
     pointer-events: all;
+    filter: blur(8);
+    backdrop-filter: blur(4px);
 }
 
 #super-popup-container {
-    display: none;
+    /* DEBUG DO NOT PUSH */
+    /* display: none; */
 }
 
 .popup-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     position: fixed;
     margin: auto;
-    top: 0;
+    top: 17vh;
     right: 0;
-    bottom: 0;
+
     left: 0;
     width: 800px;
+    max-width: 80vw;
     height: 600px;
-    background-color: wheat;
+    background-color: var(--primary);
     border-radius: 35px;
-    z-index: 2;
+    z-index: 69420;
     box-shadow: 0px 0px 20px black;
 }
 
@@ -35,49 +47,140 @@ button:hover {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: rgb(134, 110, 80);
+    color: var(--secondary);
     padding: 10px;
     scale: 2;
     cursor: pointer;
 }
 
 #popup-xbtn:hover {
-    color: rgb(134, 80, 80);
+    color: var(--accent);
+}
+
+div#top-bar {
+    display: flex;
 }
 
 .settings-title {
     /* position: absolute; */
     /* display: inline; */
     padding-top: 5px;
-    padding-left: 360px;
-    color: rgb(134, 110, 80);
+    padding: 0 0 0 45%;
+    color: var(--secondary);
 
 }
 
 .popup-info-container {
-    color: rgb(134, 82, 80);
-    padding-left: 20px;
+    color: var(--accent);
+    padding-left: 7%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 
 
 .popup-btns {
-    display: block;
-    background-color: rgb(134, 110, 80);
-    color: white;
+    /* display: block; */
+    background-color: var(--secondary);
+    border-color: solid var(--secondary);
+    color: var(--lowlight);
     font-size: larger;
     padding: 6px;
     margin-bottom: 10px;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 .danger-btn {
-    display: block;
-    background-color: rgb(134, 110, 80);
+    /* display: block; */
+    background-color: var(--secondary);
     color: white;
     font-size: larger;
     padding: 6px;
     margin-bottom: 10px;
-    border-radius: 6px;
-    background-color: rgb(181, 47, 43);
+    border-radius: 10px;
+    background-color: var(--important);
+}
+
+.danger-btn:hover {
+    background-color: red;
+}
+
+
+/* Prefs */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked+.slider {
+    background-color: var(--important);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--important);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* div.prefs-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+} */
+
+h2.prefs-title {
+    color: var(--secondary);
+    /* margin-top: 20px; */
+    padding-right: 10px;
 }

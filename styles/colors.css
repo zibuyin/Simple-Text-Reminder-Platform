@@ -1,0 +1,22 @@
+:root {
+    --accent: rgb(134, 80, 80);
+    --secondary: rgb(134, 110, 80);
+    --primary: wheat;
+    --important: rgb(217, 72, 85);
+    --lowlight: rgb(248, 231, 200)
+}
+
+
+[data-theme="dark"] {
+    --accent: rgb(220, 135, 135);
+    --secondary: rgb(165, 124, 103);
+    --primary: rgb(45, 45, 45);
+    --important: rgb(217, 85, 100);
+    --lowlight: rgb(30, 30, 30);
+    --background: rgb(20, 20, 20);
+
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

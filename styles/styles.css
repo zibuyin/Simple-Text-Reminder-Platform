@@ -1,9 +1,18 @@
+@import url("colors.css");
+
+
 p,
 h1,
 h2,
 h3 {
     font-family: sans-serif;
-    color: rgb(134, 110, 80);
+    color: var(--accent);
+}
+
+
+
+button:hover {
+    background-color: var(--accent)
 }
 
 @font-face {
@@ -17,7 +26,7 @@ h3 {
 }
 
 body {
-    background-color: wheat;
+    background-color: var(--primary);
     margin: 0;
     padding: 0;
 }
@@ -26,7 +35,7 @@ body {
 
 .title {
     font-family: sans-serif;
-    color: (134, 110, 80);
+    color: var(--secondary);
     margin-top: 80px;
     /* Ensure content starts below the navbar */
     padding: 20px;
@@ -51,16 +60,16 @@ body {
 .entry-btn {
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    color: rgb(248, 231, 200);
+    color: var(--primary);
     padding: 5px 20px;
     margin-left: 41vw;
     margin-top: 15px;
     width: 20vw;
     font-size: large;
     font-weight: bold;
-    border: 2px solid rgb(134, 110, 80);
+    border: 2px solid var(--secondary);
     border-radius: 10px;
-    background-color: rgb(134, 110, 80);
+    background-color: var(--secondary);
     cursor: pointer;
 }
 
@@ -71,11 +80,11 @@ body {
     height: 100px;
     /* margin-bottom: 20px; */
     /* margin-right: 100vw; */
-    border-color: rgb(134, 110, 80);
+    border-color: var(--secondary);
     border-width: 5px;
     border-radius: 10px;
 
-    background-color: rgb(248, 231, 200);
+    background-color: var(--lowlight);
     font-size: 23px;
     font-family: notes;
     outline: none;
@@ -84,15 +93,15 @@ body {
 }
 
 .entry-textarea:focus {
-    border-color: rgb(217, 72, 85);
+    border-color: var(--important);
 }
 
 
 
 .entry-datetime {
     padding-top: -10px;
-    background-color: rgb(134, 110, 80);
-    color: rgb(248, 231, 200);
+    background-color: var(--secondary);
+    color: var(--lowlight);
     padding-left: 10px;
 }
 
@@ -100,8 +109,8 @@ hr {
 
     height: 3px;
     border-width: 0;
-    color: rgb(134, 110, 80);
-    background-color: rgb(134, 110, 80);
+    color: var(--secondary);
+    background-color: var(--secondary);
     /* width: 61vw; */
     width: 100vw;
     float: left;

@@ -1,9 +1,11 @@
+@import url("colors.css");
+
 .nav-bar-container {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 15px 0;
-    background-color: rgb(248, 231, 200);
+    background-color: var(--lowlight);
     box-shadow: 0px 0px 2px black;
     z-index: 1000;
     display: flex;
@@ -23,24 +25,24 @@
 
 .nav-bar-btn {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(248, 231, 200);
+    color: var(--lowlight);
     padding: 5px 16px;
     font-size: large;
     font-weight: bold;
-    border: 2px solid rgb(134, 110, 80);
+    border: 2px solid var(--secondary);
     border-radius: 10px;
-    background-color: rgb(134, 110, 80);
+    background-color: var(--secondary);
     cursor: pointer;
 }
 
 .nav-bar-btn:hover {
-    background-color: rgb(134, 80, 80);
+    background-color: var(--accent);
 }
 
 #main-title {
     margin: 0 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(134, 110, 80);
+    color: var(--secondary);
 }
 
 #logo-flag {

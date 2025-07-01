@@ -45,7 +45,11 @@
             <div class="helper-background"></div>
             <div class="popup-container">
 
-                <h2 class="settings-title">Settings</h2>
+                <div id="top-bar">
+                    <h2 class="settings-title">Settings</h2>
+                    <i class="fa-solid fa-xmark" id="popup-xbtn" onclick="profileClick()"></i>
+                </div>
+
                 <div class="popup-info-container">
                     <h2 class="gdpr-title">Data and Privacy</h2>
 
@@ -57,8 +61,16 @@
                     <button class="popup-btns"><i class="fa-solid fa-file-arrow-down"></i> Download all notes
 
                     </button>
+                    <h2>Preferences</h2>
+                    <div class="prefs-container">
+                        <h2 class="prefs-title">Dark Mode</h2>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
                 </div>
-                <i class="fa-solid fa-xmark" id="popup-xbtn" onclick="profileClick()"></i>
+
             </div>
             <!-- <h2 class="title">Create a new reminder</h2> -->
         </div>
@@ -71,8 +83,7 @@
             <textarea class="entry-textarea" autofocus required></textarea>
             <div style="display: flex; flex-direction: row;">
                 <h3 class="datetime-lable">Due Time: <input type="datetime-local" class="entry-datetime" /></h3>
-                <button class="entry-btn" onclick="submitEntry()"><i class="fa-solid fa-plus"></i> Add New
-                    Reminder</button>
+                <button class="entry-btn" onclick="submitEntry()"><i class="fa-solid fa-plus"></i> Add New</button>
             </div>
 
         </div>
