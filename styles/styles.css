@@ -136,3 +136,75 @@ hr {
     font-family: notes, ChineseFonts;
     font-size: x-large;
 }
+
+#reminder-counter {
+    margin: 15px;
+}
+
+#day-clear-prompt {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#orp-happy {
+    display: block;
+    /* width: 100px;
+    height: 100px; */
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#day-clear-text {
+    text-align: center;
+    font-family: sans-serif;
+    color: var(--secondary);
+    font-size: x-large;
+}
+
+#reminder-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 20px;
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+}
+
+.notes-display {
+    font-family: notes, ChineseFonts;
+    font-size: x-large;
+    color: var(--accent);
+    width: 60vw;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--lowlight);
+    margin-right: 20px;
+    text-wrap: wrap;
+}
+
+
+.delete-button {
+    color: var(--secondary);
+    transition: all 0.3s ease;
+    float: left;
+    scale: 1.5;
+}
+
+.delete-button:hover {
+    color: var(--important);
+    cursor: pointer;
+}
+
+.delete-button:hover .notes-display {
+    text-decoration: line-through;
+}
