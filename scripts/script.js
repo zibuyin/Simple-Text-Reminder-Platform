@@ -28,10 +28,21 @@ function gdprClick() {
 function changeIconHover() {
     this.classList.remove("fa-circle");
     this.classList.add("fa-circle-check");
+    identifier = "note-" + this.id; // Get the ID of the note being hovered
+    let text = document.getElementById(identifier)
+    text.style.textDecoration = "line-through"; // Strike through the text
+    text.style.color = "gray"; // Change text color to gray
+
 }
 function changeIconLeave() {
     this.classList.remove("fa-circle-check");
     this.classList.add("fa-circle");
+    identifier = "note-" + this.id; // Get the ID of the note being hovered
+    let text = document.getElementById(identifier)
+    text.style.textDecoration = "none"; // Strike through the text
+    text.style.color = "var(--secondary)"; // Change text color to gray
+
+
 }
 // Prompt user to confirm and clear all notes
 function dataDeletion() {
