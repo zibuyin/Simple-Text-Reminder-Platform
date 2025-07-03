@@ -78,6 +78,7 @@ function displayNotes() {
     console.log("debug3", valueEntry)
     document.getElementsByClassName("entry-display")[noteID].innerHTML = valueEntry
 
+
 }
 
 function setRemindersCounter() {

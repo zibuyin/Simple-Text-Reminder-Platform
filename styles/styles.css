@@ -25,6 +25,11 @@ button:hover {
     src: url(/fonts/Notevela.otf);
 }
 
+@font-face {
+    font-family: ChineseFonts;
+    src: url(/fonts/ChineseFonts.ttf);
+}
+
 body {
     background-color: var(--primary);
     margin: 0;
@@ -83,10 +88,10 @@ body {
     border-color: var(--secondary);
     border-width: 5px;
     border-radius: 10px;
-
+    color: var(--accent);
     background-color: var(--lowlight);
     font-size: 23px;
-    font-family: notes;
+    font-family: notes, ChineseFonts;
     outline: none;
     border-style: solid;
 
@@ -128,6 +133,6 @@ hr {
 }
 
 .entry-display {
-    font-family: notes;
+    font-family: notes, ChineseFonts;
     font-size: x-large;
 }
