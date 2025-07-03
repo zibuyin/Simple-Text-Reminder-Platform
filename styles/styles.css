@@ -55,6 +55,7 @@ body {
 
     display: flex;
     flex-direction: column;
+
 }
 
 
@@ -64,12 +65,14 @@ body {
 
 .entry-btn {
     font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
+    /* position: absolute; */
     color: var(--primary);
     padding: 5px 20px;
-    margin-left: 41vw;
+    margin-left: 25vw;
     margin-top: 15px;
-    width: 20%;
+    /* width: %; */
+    float: right;
+    margin-right: 25px;
     font-size: large;
     font-weight: bold;
     border: 2px solid var(--secondary);
@@ -81,7 +84,7 @@ body {
 .entry-textarea {
     display: block;
     resize: none;
-    width: 60vw;
+    width: calc(100vw - 50px);
     height: 100px;
     /* margin-bottom: 20px; */
     /* margin-right: 100vw; */
@@ -117,9 +120,9 @@ hr {
     color: var(--secondary);
     background-color: var(--secondary);
     /* width: 61vw; */
-    width: 100vw;
+    width: calc(100vw - 20px);
     float: left;
-    padding-left: 20px;
+    /* margin-left: 20px; */
 }
 
 
