@@ -28,11 +28,10 @@ button:hover {
     flex-direction: column;
     flex-wrap: nowrap;
     position: fixed;
-    margin: auto;
-    top: 17vh;
-    right: 0;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    left: 0;
     width: 800px;
     max-width: 80vw;
     height: 600px;

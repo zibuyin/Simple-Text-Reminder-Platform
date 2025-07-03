@@ -40,7 +40,7 @@ function changeIconLeave() {
     identifier = "note-" + this.id; // Get the ID of the note being hovered
     let text = document.getElementById(identifier)
     text.style.textDecoration = "none"; // Strike through the text
-    text.style.color = "var(--secondary)"; // Change text color to gray
+    text.style.color = "var(--accent)"; // Change text color to gray
 
 
 }
@@ -48,15 +48,24 @@ function changeIconLeave() {
 function dataDeletion() {
     var confirm = prompt("Please type (case sensitive): I confirm that I want to delete all my notes")
     if (confirm === "I confirm that I want to delete all my notes") {
-        localStorage.clear()
+        deleteAllNotes(); // Call the delete function if the confirmation is correct
         alert("Confirmation succeeded. All notes are deleted")
         location.reload()
     } else {
-        alert("Confirmation failed. Aborting data deletion")
+        alert("Confirmation failed. No notes were deleted.");
     }
 }
+function deleteAllNotes() {
+    currentDarkMode = document.documentElement.getAttribute('data-theme');
+    storeMode = currentDarkMode || localStorage.getItem('theme') || 'light'; // Fallback to light mode if not set
 
-// Add a new note
+    localStorage.clear(); // Clear all notes from localStorage
+    localStorage.setItem('noteCount', -1); // Reset note count
+    localStorage.setItem('theme', storeMode); // Store the current theme
+    document.documentElement.setAttribute('data-theme', storeMode); // Set the theme back to the stored value
+    // Add a new note
+}
+
 function submitEntry() {
     var valueEntry = document.getElementsByClassName("entry-textarea")[0].value.trim();
     var textArea = document.getElementsByClassName("entry-textarea")[0]
@@ -106,11 +115,26 @@ function displayNotes() {
             setRemindersCounter(); // Update count
         };
 
+
+
+        const StarButton = document.createElement("i"); // Create star icon
+        StarButton.className = "fa-regular fa-star star-button";
+        StarButton.id = "star-" + i;
+        StarButton.onmousehover = function () {
+            this.classList.remove("fa-regular");
+            this.classList.add("fa-solid");
+        }; // Change icon on hover
+        StarButton.onmouseleave = function () {
+            this.classList.remove("fa-solid");
+            this.classList.add("fa-regular"); // Change icon back on mouse leave
+        };
+
+
         notes.appendChild(deleteButton);
+        // notes.appendChild(StarButton); // Add the star button to the note
         reminderContainer.appendChild(notes);
     }
 
-    console.log("Displayed", noteCount + 1, "notes");
 }
 
 // Count and show how many reminders are stored
@@ -141,12 +165,12 @@ checkbox.addEventListener('change', function () {
         console.log("Dark mode enabled")
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        document.cookie = "theme=dark; path=/; expires=Thu, 1 Jan 5000 12:00:00 UTC";
+        //document.cookie = "theme=dark; path=/; expires=Thu, 1 Jan 5000 12:00:00 UTC";
     } else {
         console.log("Dark mode disabled")
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        document.cookie = "theme=light; path=/; expires=Thu, 1 Jan 5000 12:00:00 UTC";
+        //document.cookie = "theme=light; path=/; expires=Thu, 1 Jan 5000 12:00:00 UTC";
     }
 });
 
