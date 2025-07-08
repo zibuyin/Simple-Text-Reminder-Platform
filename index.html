@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://css.hackclub.com/theme.css"> -->
-    <title>Simple Text Reminder Platform</title>
+    <title>Simple Reminders</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/styles/styles.css"> <!-- Link to CSS file -->
     <link rel="stylesheet" href="/styles/popup.css">
@@ -21,7 +21,7 @@
 
         <nav>
             <div class="nav-bar-container">
-                <h2 id="main-title">Simple Text Reminder</h2>
+                <h2 id="main-title">Simple Reminders</h2>
                 <!-- <img src="https://assets.hackclub.com/flag-orpheus-top.svg" id="logo-flag" /> -->
 
                 <a href="https://hackclub.com/"><img src="https://assets.hackclub.com/flag-orpheus-top.svg"
@@ -58,7 +58,7 @@
                     <button class="popup-btns"><i class="fa-solid fa-cookie-bite"></i> Delete all cookies
 
                     </button>
-                    <button class="popup-btns"><i class="fa-solid fa-file-arrow-down"></i> Download all notes
+                    <button class="popup-btns"><i class="fa-solid fa-file-arrow-down"></i> Download all reminders
 
                     </button>
                     <h2>Preferences</h2>
@@ -79,17 +79,17 @@
 
 
         <div class="entry-container">
-            <h2 class="entry-title">Add New Reminders</h2>
+            <h1 class="entry-title">Today</h1>
             <textarea class="entry-textarea" autofocus required></textarea>
             <div style="display: flex; flex-direction: row;">
-                <h3 class="datetime-lable">Due Time: <input type="datetime-local" class="entry-datetime" /></h3>
-                <button class="entry-btn" onclick="submitEntry()"><i class="fa-solid fa-plus"></i> Add New</button>
+                <!-- <h3 class="datetime-lable">Due Time: <input type="datetime-local" class="entry-datetime" /></h3> -->
+                <button class="entry-btn" onclick="submitEntry()"><i class="fa-solid fa-plus-circle"></i> Add</button>
             </div>
             <hr>
             </hr>
         </div>
 
-        <h1 id="reminder-counter">There are 0 reminders</h1>
+        <h1 id="reminder-counter">You have 0 reminders</h1>
         <div id="day-clear-prompt">
             <img id="orp-happy" src="/images/orphappy.png" alt="Orpheus Happy" />
             <h2 id="day-clear-text">You have no reminders, yeee!</h2>

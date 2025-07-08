@@ -101,7 +101,7 @@ function displayNotes() {
         noteDisplay.className = "notes-display";
         noteDisplay.id = "note-" + i;
         noteDisplay.innerHTML = noteValue;
-        notes.appendChild(noteDisplay);
+        notes.prepend(noteDisplay);
 
         const deleteButton = document.createElement("i"); // Create delete icon
         deleteButton.className = "fa-regular fa-circle delete-button";
@@ -146,16 +146,22 @@ function setRemindersCounter() {
             counter++;
         }
     }
-    document.getElementById("reminder-counter").innerHTML = "There are " + counter + " reminders";
+    const reminderCounter = document.getElementById("reminder-counter")
+    reminderCounter.innerHTML = "You have " + counter + " reminders";
 
     //Show or hide the day clear prompt based on the counter
     const dayClearPrompt = document.getElementById("day-clear-prompt");
+
     if (counter === 0) {
         dayClearPrompt.style.display = "block"; // Show the prompt
+        reminderCounter.innerHTML = "Day Clear!";
     }
     else {
         dayClearPrompt.style.display = "none"; // Hide the prompt
+        reminderCounter.style.display = "block"; // Show the counter
     }
+
+
 }
 
 // Dark mode toggle listener
@@ -187,6 +193,12 @@ if (document.documentElement.getAttribute('data-theme') === 'dark' || localStora
     document.documentElement.setAttribute('data-theme', 'light');
     checkbox.checked = false;
 }
+
+
+
+
+
+
 
 // Load all notes and counter on page load
 displayNotes();
