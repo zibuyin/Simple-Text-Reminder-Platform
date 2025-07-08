@@ -81,9 +81,16 @@
         <div class="entry-container">
             <h1 class="entry-title">Today</h1>
             <textarea class="entry-textarea" autofocus required></textarea>
-            <div style="display: flex; flex-direction: row;">
+            <div class="btn-container">
+
+                <button class="entry-btn" id="summerize-btn" onclick="summerizeReminder()"><i
+                        class="fa-solid fa-wand-magic-sparkles"></i>
+                    Summerize</button>
+                <button class="entry-btn" id="clear-btn"><i class="fa-solid fa-delete-left"></i> Clear</button>
+                <button class="entry-btn" id="submit-btn" onclick="submitEntry()"><i
+                        class="fa-solid fa-plus-circle"></i> Add</button>
+
                 <!-- <h3 class="datetime-lable">Due Time: <input type="datetime-local" class="entry-datetime" /></h3> -->
-                <button class="entry-btn" onclick="submitEntry()"><i class="fa-solid fa-plus-circle"></i> Add</button>
             </div>
             <hr>
             </hr>
@@ -104,7 +111,7 @@
     </footer>
 
     <script defer src="/scripts/script.js"></script>
-    <!-- <script src="/scripts/cookies.js"></script> -->
+    <script src="/scripts/darkmode.js"></script>
 </body>
 
 </html>

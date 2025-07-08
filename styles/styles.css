@@ -9,6 +9,10 @@ h3 {
     color: var(--accent);
 }
 
+button {
+    cursor: pointer;
+
+}
 
 
 button:hover {
@@ -63,24 +67,40 @@ body {
     display: block;
 }
 
+/* #summerize-btn {
+    background: linear-gradient(to right, rgb(0, 185, 185), orange);
+} */
+
 .entry-btn {
     --width: 150px;
     font-family: Arial, Helvetica, sans-serif;
-    /* position: absolute; */
     color: var(--primary);
-    padding: 5px 20px;
-    margin-left: calc(100vw - 2px - var(--width));
-    width: 150px;
+    padding: 10px 5px;
+
     margin-top: 15px;
-    /* width: %; */
-    float: right;
-    margin-right: 25px;
+    width: 10%;
+    min-width: 140px;
+
     font-size: large;
     font-weight: bold;
     border: 2px solid var(--secondary);
     border-radius: 10px;
     background-color: var(--secondary);
-    cursor: pointer;
+
+}
+
+#submit-btn {
+    background-color: var(--important);
+    border-color: var(--important);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    float: right;
+    align-items: center;
+
 }
 
 .entry-textarea {
@@ -230,6 +250,10 @@ hr {
 /* Prevents HackClub logo blocking settings button */
 @media only screen and (max-width: 674px) {
     #logo-flag {
+        display: none;
+    }
+
+    #clear-btn {
         display: none;
     }
 }
