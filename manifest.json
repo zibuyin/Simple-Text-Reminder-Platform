@@ -1,0 +1,22 @@
+{
+    "short_name": "Simple Reminders V1.0",
+    "name": "Simple Reminders",
+    "icons": [
+        {
+            "src": "/images/archive/IconKitchen-Output 2/web/icon-192-maskable.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/archive/IconKitchen-Output 2/web/icon-512-maskable.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6"
+}
