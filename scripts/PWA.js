@@ -1,22 +1,25 @@
 
-let installPrompt = null;
-const installButton = document.getElementById("install-btn");
+let deferredPrompt = null;
 
-// Handle install prompt
+// Save the event so we can trigger it later
 window.addEventListener("beforeinstallprompt", (event) => {
-    event.preventDefault();
-    installPrompt = event;
-    installButton.removeAttribute("hidden");
+    event.preventDefault(); // Prevent auto prompt
+    deferredPrompt = event; // Save the event for later
+    console.log("Install prompt saved and ready to trigger.");
 });
 
-installButton.addEventListener("click", async () => {
-    if (!installPrompt) return;
-
-    const result = await installPrompt.prompt();
-    console.log(`Install prompt was: ${result.outcome}`);
-    installPrompt = null;
-    installButton.setAttribute("hidden", "");
-});
-
-
-
+function installHandler() {
+    if (deferredPrompt) {
+        deferredPrompt.prompt(); // Show the prompt
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+                console.log("User accepted the install prompt");
+            } else {
+                console.log("User dismissed the install prompt");
+            }
+            deferredPrompt = null; // Clear after use
+        });
+    } else {
+        console.log("No install prompt available.");
+    }
+}
