@@ -6,12 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is a reminders app that helps you to remember everyday tasks easily. With privacy in mind, all reminders are stored locally">
     <!-- <link rel="stylesheet" href="https://css.hackclub.com/theme.css"> -->
     <title>Simple Reminders V1.1</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/styles/styles.css"> <!-- Link to CSS file -->
     <link rel="stylesheet" href="/styles/popup.css">
     <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
     <link rel="manifest" href="manifest.json" />
 
     <script src="https://kit.fontawesome.com/f756cbfd78.js" crossorigin="anonymous"></script>
@@ -35,6 +38,10 @@
                     <button class="nav-bar-btn" id="about">
                         <i class="fa-solid fa-info-circle"></i> About
                     </button>
+                    <button class="nav-bar-btn" id="install-btn">
+                        <i class="fa-solid fa-info-circle"></i> Install
+                    </button>
+
                 </div>
             </div>
 
@@ -109,11 +116,12 @@
     </main>
 
     <footer>
-        <!-- Footer content -->
+
     </footer>
 
     <script defer src="/scripts/script.js"></script>
     <script src="/scripts/darkmode.js"></script>
+    <script src="/scripts/PWA.js"></script>
 </body>
 
 </html>
