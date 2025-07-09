@@ -106,8 +106,10 @@ body {
 .entry-textarea {
     display: block;
     resize: none;
-    width: calc(100vw - 50px);
+    /* width: 95%; */
     height: 100px;
+    /* margin-left: auto - 20px; */
+    margin-right: 20px;
     /* margin-bottom: 20px; */
     /* margin-right: 100vw; */
     border-color: var(--secondary);
@@ -247,13 +249,20 @@ hr {
     cursor: pointer;
 }
 
-/* Prevents HackClub logo blocking settings button */
+
 @media only screen and (max-width: 674px) {
+
+    /* Prevents HackClub logo blocking settings button */
     #logo-flag {
         display: none;
     }
 
     #clear-btn {
         display: none;
+    }
+
+    .btn-container {
+        gap: 5vw;
+        /* gap: 0px; */
     }
 }
