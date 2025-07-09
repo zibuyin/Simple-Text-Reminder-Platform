@@ -80,13 +80,14 @@
 
         <div class="entry-container">
             <h1 class="entry-title">Today</h1>
-            <textarea class="entry-textarea" autofocus required></textarea>
+            <textarea class="entry-textarea" autofocus required placeholder="Enter new reminder here..."></textarea>
             <div class="btn-container">
 
                 <button class="entry-btn" id="summerize-btn" onclick="summerizeReminder()"><i
                         class="fa-solid fa-wand-magic-sparkles"></i>
                     Summerize</button>
-                <button class="entry-btn" id="clear-btn"><i class="fa-solid fa-delete-left"></i> Clear</button>
+                <button class="entry-btn" id="clear-btn" onclick="clearEntry()"><i class="fa-solid fa-delete-left"></i>
+                    Clear</button>
                 <button class="entry-btn" id="submit-btn" onclick="submitEntry()"><i
                         class="fa-solid fa-plus-circle"></i> Add</button>
 

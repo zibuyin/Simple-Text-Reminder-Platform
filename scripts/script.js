@@ -163,17 +163,41 @@ function setRemindersCounter() {
 
 
 }
-
+textArea = document.getElementsByClassName("entry-textarea")[0]
 
 function summerizeReminder() {
-    textarea = document.getElementsByClassName("entry-textarea")[0]
+
     alert("Work In Progess")
 }
 
 
+function clearEntry() {
+
+    // console.log("cleared")
+    textArea.value = "";
+}
+
+
+
+// //Button Event Listeners 
+// document.addEventListener('keydown', shiftEnterHandler)
+// function shiftEnterHandler(event) {
+//     textarea = document.getElementsByClassName("entry-textarea")[0] //Only proceed if focused on input area
+//     if (textarea === document.activeElement) {
+//         event.preventDefault()
+//         if (event.key == "Enter" && event.shiftkey) {
+//             console.log("test")
+
+//         }
+
+//     }
+
+
+// }
 
 if (localStorage.getItem('noteCount') === null) {
     localStorage.setItem('noteCount', -1);
+
 }
 
 
