@@ -1,14 +1,14 @@
 {
     "short_name": "Simple Reminders V1.0",
-    "name": "Simple Reminders DEV",
+    "name": "Simple Reminders INFDEV",
     "icons": [
         {
-            "src": "/images/archive/IconKitchen-Output 2/web/icon-192-maskable.png",
+            "src": "/images/Apple4/Simple_Reminders-iOS-Dark-1024x1024@2x.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/images/archive/IconKitchen-Output 2/web/icon-512-maskable.png",
+            "src": "/images/Apple4/Simple_Reminders-iOS-Dark-1024x1024@2x.png",
             "type": "image/png",
             "sizes": "512x512"
         }

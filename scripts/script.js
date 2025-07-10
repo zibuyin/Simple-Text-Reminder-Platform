@@ -10,6 +10,34 @@ function profileClick() {
         container.style.display = "block";
     }
 }
+var w = window.innerWidth
+function aboutClick() {
+
+    console.log("called")
+    var container = document.getElementById("super-about-container");
+    var mobileContainer = document.getElementById("super-about-container");
+    console.log(container)
+    if (container.style.display === "block") {
+        console.log("displaying popup")
+        setLogoTheme()
+        if (w > 750) {
+            container.style.display = "none";
+        }
+        else {
+            // alert(toString(w))
+            mobileContainer.style.display = "none"
+        }
+
+    } else {
+        console.log("hiding popup")
+        if (w > 750) {
+            container.style.display = "block";
+        }
+        else {
+            mobileContainer.style.display = "block"
+        }
+    }
+}
 
 function gdprClick() {
     console.log("called")

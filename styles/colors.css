@@ -3,7 +3,8 @@
     --secondary: rgb(134, 110, 80);
     --primary: wheat;
     --important: rgb(217, 72, 85);
-    --lowlight: rgb(248, 231, 200)
+    --lowlight: rgb(248, 231, 200);
+    --unimportant: rgba(60, 60, 60, 0.5)
 }
 
 
@@ -13,8 +14,8 @@
     --primary: rgb(45, 45, 45);
     --important: rgb(217, 85, 100);
     --lowlight: rgb(30, 30, 30);
-    --background: rgb(20, 20, 20);
-
+    --background: rgba(20, 20, 20, 0.2);
+    --unimportant: rgb(200, 200, 200)
 }
 
 * {

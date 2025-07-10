@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="/styles/popup.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/about.css">
     <link rel="manifest" href="manifest.json" />
+    <meta id="theme-color" name="theme-color" content="rgb(248, 231, 200)">
+
 
     <script src="https://kit.fontawesome.com/f756cbfd78.js" crossorigin="anonymous"></script>
 </head>
@@ -35,7 +38,7 @@
                     <button onclick="profileClick()" class="nav-bar-btn" id="settings">
                         <i class="fa-solid fa-gear"></i> Settings
                     </button>
-                    <button class="nav-bar-btn" id="about">
+                    <button class="nav-bar-btn" id="about" onclick="aboutClick()">
                         <i class="fa-solid fa-info-circle"></i> About
                     </button>
                     <button class="nav-bar-btn" id="install-btn" onclick="installHandler()">
@@ -48,6 +51,7 @@
     </header>
 
     <main>
+        <!-- POPUPS -->
         <!-- Don't question the name... It's for JavaScript :) -->
         <div id="super-popup-container">
             <div class="helper-background"></div>
@@ -82,7 +86,48 @@
             </div>
             <!-- <h2 class="title">Create a new reminder</h2> -->
         </div>
+        <div id="super-about-container">
+            <div class="helper-background"></div>
+            <div class="about-content-container">
+                <i class="fa-solid fa-xmark" id="popup-xbtn" onclick="aboutClick()"></i>
+                <img src="/images/Apple4/Simple_Reminders-iOS-Default-1024x1024@2x.png" id="-about-logo-image" />
+                <div id="-about-words-container">
+                    <h2 id="-about-title">Simple Reminders</h2>
+                    <p class="-about-label">Version 1.0.0</p>
+                    <p class="-about-label">MIT License</p>
+                    <p class="-about-label">Copyright © 2025 Nathan (Zibu) Yin.</p>
+                    <p class="-about-label">All Rights Reserved.</p>
+                    <p class="-about-label">Last Updated: 10 Jul 2025</p>
+                </div>
 
+
+
+
+
+            </div>
+
+        </div>
+        <div id="--mobile-super-about-container">
+            <div class="helper-background"></div>
+            <div class="--mobile--about-content-container">
+                <i class="fa-solid fa-xmark" id="popup-xbtn" onclick="aboutClick()"></i>
+                <img src="/images/Apple4/Simple_Reminders-iOS-Default-1024x1024@2x.png" id="-about-logo-image" />
+                <div id="--mobile-about-words-container">
+                    <h2 id="-about-title">Simple Reminders</h2>
+                    <p class="-about-label">Version 1.0.0</p>
+                    <p class="-about-label">MIT License</p>
+                    <p class="-about-label">Copyright © 2025 Nathan (Zibu) Yin.</p>
+                    <p class="-about-label">All Rights Reserved.</p>
+                    <p class="-about-label">Last Updated: 10 Jul 2025</p>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
 
 
 
