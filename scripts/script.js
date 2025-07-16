@@ -20,7 +20,7 @@ function aboutClick() {
     if (container.style.display === "block") {
         console.log("displaying popup")
         setLogoTheme()
-        if (w > 750) {
+        if (w > 750) {c
             container.style.display = "none";
         }
         else {

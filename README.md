@@ -1,26 +1,35 @@
-# [Simple Text Reminders (WIP)](https://reminders.nathanyin.com)
-![([/images/demo_screenshot1.png](https://github.com/zibuyin/Simple-Text-Reminder-Platform/blob/main/images/demo_screenshot1.png))](https://github.com/zibuyin/Simple-Text-Reminder-Platform/blob/main/images/demo_screenshot1.png)
-Demo: reminders.nathanyin.com
->[!IMPORTANT]  
-> Reminders are hard to use nowadays, different apps with complex features that are hard to use. Personal data getting send to servers. Terrible user experience and data security.
+# Simple Text Reminders (WIP)
 
+### **🌐 Live Demo: reminders.nathanyin.com**
 
-## Features
+[!IMPORTANT]
+Most reminder apps today are bloated, confusing, and often compromise your privacy. STR brings simplicity, control, and peace of mind — right on your device.
 
-1. **Data Privacy and Security**
-    
-    Simple Text Reminders (STR)’s data storage is fully on-device. All notes are stored using the localStorage API. No data leaves your device. You can also easily delete all your on-device stored data with one click of a button
-    
+⸻
 
+🚀 Features
 
-2. **Multimedia support [WIP]**
-    
-    You will be able to easily attach files to your notes, a picture or a audio, a python code files. You name it!
-    
-3. **Open Sourced**
+## 1. Privacy-First Design
+	•	All data is stored locally using the localStorage API.
+	•	Nothing ever leaves your device — no accounts, no cloud, no tracking.
+	•	Instantly clear all saved data with one click.
+
+## 2. Progressive Web App (PWA)
+	•	Works like a native app: install in one click.
+	•	Lightweight and fast — no unnecessary bloat.
+	•	Full offline support.
+
+## 3. Designed for Simplicity
+	•	Minimal, intuitive interface.
+	•	Offline-friendly.
+	•	Push Notifications [WIP]
+	•	Multiple color themes (yes, it has dark mode 😎)
+
+⸻
+
+📄 License
 
 MIT License
-
 Copyright (c) 2025 Nathan (Zibu) Yin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
