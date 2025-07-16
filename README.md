@@ -2,10 +2,9 @@
 
 ### **🌐 Live Demo: reminders.nathanyin.com**
 
-[!IMPORTANT]
-Most reminder apps today are bloated, confusing, and often compromise your privacy. STR brings simplicity, control, and peace of mind — right on your device.
+>[!IMPORTANT]
+>Most reminder apps today are bloated, confusing, and often compromise your privacy. STR brings simplicity, control, and peace of mind — right on your device.
 
-⸻
 
 🚀 Features
 
