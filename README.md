@@ -1,4 +1,4 @@
-# Simple Text Reminders (WIP)
+# Simple Reminders
 
 ### **🌐 Live Demo: reminders.nathanyin.com**
 
